@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.nav__title {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
+    margin-top: 48px;
+    max-width: 1000px;
+    line-height: 1.25;
+}
+
+.logo {
+    height: 60px;
+    padding-left: 24px;
+}
+
+.nav__container {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    background-color: #552155;
+    background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-3d-rendered-movie-theatre-with-white-screen-image_3732826.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.content__wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   z-index: 2;
+   
+}
+
+.links {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 24px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.link__anchor--btn {
+    text-decoration: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid (239, 239, 239, 0);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 30px;
+    max-height: 42px;
+    min-height: 42px;
+    color: rgba(71, 69, 69, 0.795);
+    position: relative;
+}
+
+.search__content--wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    max-width: 600px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search__wrapper {
+    position: absolute;
+    padding: 0 20px 0 8px;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.overlay {
+    /* background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-3d-rendered-movie-theatre-with-white-screen-image_3732826.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; */
+}
+
+.overlay:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(41, 25, 71, .83); */
+    pointer-events: none;
+}
+

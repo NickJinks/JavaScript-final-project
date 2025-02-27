@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final JavaScript Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <section class="landing-page">
+        <nav>
+            <div class="nav__container">
+                <div class="content__wrapper">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixmEOFqOzGzfZRDu8i76vj8Vyrudgp1Az7Q&s" alt="" class="logo">
+                    </div>
+                    <div class="links click">
+                        <a href="#landing-page" class="link">Home</a>
+                        <a href="#" class="link">Movies</a>
+                        <a href="#" class="link__anchor--btn">Contact</a>
+                    </div>
+                </div>
+                <div class="search__content--wrapper">
+                    <h1 class="nav__title">
+                        Find Your Movie!
+                    </h1>
+                    <div class="input__wrapper">
+                        <input type="text" placeholder="Search by Title or Year Released">
+                        <div class="search__wrapper">
+                            <a href=""><i class="fa-solid fa-magnifying-glass" onclick="renderMovies()" role="img"></i></a>
+                        </div>
+                </div>
+                </div>
+                    <!-- <div class="input__wrapper">
+                        <input type="text" placeholder="Search by Title or Year Released">
+                        <div class="search__wrapper">
+                            <a href=""><i class="fa-solid fa-magnifying-glass" onclick="renderMovies()" role="img"></i></a>
+                        </div>
+                </div> -->
+                <div class="overlay"></div>
+            </div>
+        </nav>
+    </section>
+    
+</body>
+</html>
