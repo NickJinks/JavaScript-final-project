@@ -22,6 +22,7 @@ input {
     margin-top: 48px;
     max-width: 1000px;
     line-height: 1.25;
+    color: #fff;
 }
 
 .logo {
@@ -124,8 +125,9 @@ input {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10000;
     font-size: 32px;
+    color: black;
 }
 
 .overlay {
@@ -141,16 +143,16 @@ input {
     right: 0;
     bottom: 0;
     z-index: 1; */
-}
+ }
 
 .overlay:after {
-    content: "";
+    /* content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: rgba(41, 25, 71, .83); */
-    pointer-events: none;
+    background-color: rgba(41, 25, 71, .83);
+    pointer-events: none; */
 }
 
