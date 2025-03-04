@@ -1,47 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final JavaScript Project</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="app.js"></script>
-</head>
-<body>
-    <section class="landing-page">
-        <nav>
-            <div class="nav__container">
-                <div class="content__wrapper">
-                    <div class="logo">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixmEOFqOzGzfZRDu8i76vj8Vyrudgp1Az7Q&s" alt="" class="logo">
-                    </div>
-                    <div class="links click">
-                        <a href="#landing-page" class="link">Home</a>
-                        <a href="#" class="link">Movies</a>
-                        <a href="#" class="link__anchor--btn">Contact</a>
-                    </div>
-                </div>
-                <div class="search__content--wrapper">
-                    <h1 class="nav__title">
-                        Find Your Movie!
-                    </h1>
-                    <div class="input__wrapper">
-                        <input type="text" placeholder="Search by Title or Year Released">
-                        <div class="search__wrapper">
-                            <a href="#"><i class="fa-solid fa-magnifying-glass" onclick="renderMovies()" role="img"></i></a>
-                        </div>
-                </div>
-                </div>
-                    <!-- <div class="input__wrapper">
-                        <input type="text" placeholder="Search by Title or Year Released">
-                        <div class="search__wrapper">
-                            <a href=""><i class="fa-solid fa-magnifying-glass" onclick="renderMovies()" role="img"></i></a>
-                        </div>
-                </div> -->
-                <div class="overlay"></div>
+    <script
+      src="https://kit.fontawesome.com/8c47585c71.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing-page">
+      <nav>
+        <div class="nav__container">
+          <div class="content__wrapper">
+            <div class="logo">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixmEOFqOzGzfZRDu8i76vj8Vyrudgp1Az7Q&s"
+                alt=""
+                class="logo"
+              />
             </div>
-        </nav>
+            <div class="links click">
+              <a
+                href="#landing-page"
+                class="link link__hover-effect link__hover-effect--white"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="link link__hover-effect link__hover-effect--white"
+                >Movies</a
+              >
+              <a href="#" class="link__anchor--btn">Contact</a>
+            </div>
+          </div>
+          <div class="search__content--wrapper">
+            <h1 class="nav__title">Find Your Movie!</h1>
+            <div class="input__wrapper">
+              <input
+                type="text"
+                placeholder="Search by Title or Year Released"
+                onkeypress="renderMovies(event)"
+              />
+              <div class="search__wrapper">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-magnifying-glass"
+                    onclick="renderMovies(event)"
+                    role="img"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </section>
-    
-</body>
+
+    <main id="movies__main">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="movies__header">
+            <h2 class="main__title movies__header--title">
+              <span class="blue">Browse</span> or
+              <span class="blue">Filter</span> to find your
+              <span class="blue">Movie</span>.
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="A-To-Z">A-Z</option>
+              <option value="OLD-TO-NEW">Oldest to Newest</option>
+              <option value="NEW-TO-OLD">Newest to Oldest</option>
+            </select>
+          </div>
+          <div class="movies">
+            <div class="movie">
+                <figure class="movie__img--wrapper">
+                    <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg" alt="">
+                </figure>
+                <div class="movie__wrapper--bg"></div>
+                <div class="movie__description">
+                 <div class="movie__description--title">
+                  <a href="#"><i class="fa-solid fa-film"></i></a>
+                    <h3 class="movie__title">
+                      The Fast And The Furious
+                    </h3>
+                    </div>
+                    <div class="movie__release--date">
+                      <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
+                        <h2 class="release__date">
+                            2001
+                        </h2>
+                 </div>
+                </div>
+        </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

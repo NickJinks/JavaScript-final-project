@@ -14,6 +14,18 @@ input {
     padding-left: 20px;
 }
 
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
 .nav__title {
     text-align: center;
     font-size: 42px;
@@ -22,7 +34,7 @@ input {
     margin-top: 48px;
     max-width: 1000px;
     line-height: 1.25;
-    color: #fff;
+    color: #242424;
 }
 
 .logo {
@@ -33,14 +45,13 @@ input {
 .nav__container {
     height: 300px;
     width: 100%;
-    position: absolute;
+    position: relative;
     background-color: #552155;
     background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-3d-rendered-movie-theatre-with-white-screen-image_3732826.jpg");
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    position: absolute;
-    background-attachment: fixed;
+    background-attachment:fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -95,6 +106,35 @@ input {
     position: relative;
 }
 
+.link__anchor--btn:hover {
+    background-color:#9e7bb5;
+    color: white;
+    transition: all 450ms ease;
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
 .search__content--wrapper {
     display: flex;
     flex-direction: column;
@@ -120,39 +160,149 @@ input {
 
 .search__wrapper {
     position: absolute;
-    padding: 0 20px 0 8px;
+    padding: 12px 20px 0 8px;
     cursor: pointer;
     top: 0;
     bottom: 0;
     right: 0;
     z-index: 10000;
     font-size: 32px;
-    color: black;
 }
 
-.overlay {
-    /* background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-3d-rendered-movie-theatre-with-white-screen-image_3732826.jpg");
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    position: absolute;
-    background-attachment: fixed;
+.fa-magnifying-glass {
+    color: rgba(71, 69, 69, 0.795);
+}
+
+.fa-magnifying-glass:hover {
+    color:blue;
+    transform: scale(.75);
+    transition: all 600ms ease;
+}
+
+
+/* MOVIES */
+
+select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color:#606266;
+    height: 36px;
+    line-height: 42px;
+    outline: none;
+    padding: 0 18px;
     width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1; */
- }
+    max-width: 220px;
+}
 
-.overlay:after {
-    /* content: "";
+.blue {
+    color: hwb(226 12% 31%);
+}
+
+.fa-film {
+    color: #fff;
+    margin-right: 2px;
+    
+}
+
+.fa-calendar-days {
+    color: white;
+    margin-right: 8px;
+}
+
+.movies__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.movies__header--title {
+    margin-bottom: 12px;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie__description--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie {
+  width: 25%;
+  padding: 24px;
+  position: relative;
+  border-radius: 20px;
+}
+
+
+.movie__img {
+    max-height: 360px;
+    transition: all 600ms ease;
+    cursor: pointer;
+    object-fit: contain;
+    object-position: left;
+}
+
+.movie:hover .movie__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.movie:hover .movie__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.movie__description {
+    position: absolute;
+    bottom: 30%;
+    left: 30px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms ease;
+    color:#777b7e;
+    max-width: 550px;
+    font-size: 12px;
+}
+
+.movie:hover .movie__wrapper--bg {
+    opacity: 0.8;
+    background-color: #242424;
+}
+
+.movie__description--title {
+    font-size: 16px;
+}
+
+.movie__title {
+    margin: 8px;
+}
+
+.movie__release--date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+  }
+
+
+
+/* .movie__wrapper--bg {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(41, 25, 71, .83);
-    pointer-events: none; */
-}
-
+    width: 32%;
+    height: 100%;
+    opacity: 0.7;
+    transition: all 450ms ease;
+} */
