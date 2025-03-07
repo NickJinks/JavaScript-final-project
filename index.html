@@ -72,13 +72,15 @@
             </h2>
             <select id="filter" onchange="filterMovies(event)">
               <option value="" disabled selected>Sort</option>
-              <option value="A-To-Z">A-Z</option>
-              <option value="OLD-TO-NEW">Oldest to Newest</option>
-              <option value="NEW-TO-OLD">Newest to Oldest</option>
+              <option value="OLD_TO_NEW">Old - New</option>
+              <option value="NEW_TO_OLD">New - Old</option>
             </select>
           </div>
           <div class="movies">
-            <div class="movie">
+            <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+          </div>
+          <div class="movies">
+            <!-- <div class="movie">
                 <figure class="movie__img--wrapper">
                     <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg" alt="">
                 </figure>
@@ -98,7 +100,7 @@
                  </div>
                 </div>
         </div>
-          </div>
+          </div> -->
         </div>
           </div>
         </div>

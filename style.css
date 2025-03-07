@@ -182,18 +182,10 @@ input {
 
 /* MOVIES */
 
-select {
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    color:#606266;
-    height: 36px;
-    line-height: 42px;
-    outline: none;
-    padding: 0 18px;
-    width: 100%;
-    max-width: 220px;
-}
+#movies__main {
+    flex: 1;
+  }
+  
 
 .blue {
     color: hwb(226 12% 31%);
@@ -295,14 +287,46 @@ select {
     display: flex;
   }
 
+  select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 200px;
+  }
 
-
-/* .movie__wrapper--bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 32%;
-    height: 100%;
-    opacity: 0.7;
-    transition: all 450ms ease;
-} */
+  .books__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+    color: #7342d6;
+  }
+  
+  .movies__loading--spinner {
+    display: none !important;
+  }
+  
+  .movies__loading .movies__loading--spinner {
+    display: block !important;
+  }
+  
+  .fa-spinner {
+    animation: rotate 600ms infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
