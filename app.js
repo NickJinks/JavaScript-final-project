@@ -1,18 +1,30 @@
 // https://www.omdbapi.com/?apikey=74a7591a&s=fast
 
-let movies;
+let hasMovies;
+
 
 async function renderMovies(filter) {
-    const movies = await fetch("https://www.omdbapi.com/?apikey=74a7591a&s=fast")
+    const movieTitle = document.querySelector(".movie__Title").value
+    const movies = await fetch(`https://www.omdbapi.com/?apikey=74a7591a&s=${movieTitle}`);
     const moviesData =  await movies.json();
     const moviesList = document.querySelector(".movies");
+    
     // console.log(moviesData);
+
 
     moviesList.classList += ' movies__loading'
 
-    if(!movies) {
-        movies = await movies.json();
-    }
+    if(!hasMovies)
+        hasMovies = moviesData;
+
+    // if(hasMovies) {
+    //     hasMovies = false;
+    //     return moviesList.classList += ' movies__loading'
+    // }
+
+    // hasMovies = true;
+    // moviesList.classList.remove('movies__loading')
+
 
     moviesList.classList.remove('movies__loading')
 
@@ -23,7 +35,7 @@ async function renderMovies(filter) {
         moviesData.Search.sort((a,b) => (b.Year) - (a.Year));
     }
 
-    moviesList.innerHTML = moviesData.Search.map((movie) =>
+    moviesList.innerHTML = moviesData.Search.slice(0,6).map((movie) =>
          `<div class="movie">
         <figure class="movie__img--wrapper">
             <img class="movie__img" src="${movie.Poster}" alt="">
@@ -47,10 +59,23 @@ async function renderMovies(filter) {
     </div>`
 )
     .join("")
-}
+};
 function filterMovies(event) {
     renderMovies(event.target.value);
-  }
+  };
 
-   renderMovies();
 
+const textbox = document.getElementById("searchText");
+textbox.addEventListener("keypress", function renderMovies(event) {
+    if(KeyboardEvent.keyCode === '13') {
+        document.getElementById("searchBtn").click();
+    }
+    else if(KeyboardEvent.keyCode !== '13') {
+        return false;
+    }
+});
+
+
+
+ 
+ 

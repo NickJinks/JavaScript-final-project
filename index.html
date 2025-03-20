@@ -23,7 +23,7 @@
                 class="logo"
               />
             </div>
-            <div class="links click">
+            <div class="links click__main">
               <a
                 href="#landing-page"
                 class="link link__hover-effect link__hover-effect--white"
@@ -41,15 +41,18 @@
             <h1 class="nav__title">Find Your Movie!</h1>
             <div class="input__wrapper">
               <input
+              class="movie__Title"
                 type="text"
-                placeholder="Search by Title or Year Released"
+                id="searchText"
                 onkeypress="renderMovies(event)"
+               placeholder= "Search by Title or Year Released" 
               />
               <div class="search__wrapper">
                 <a href="#"
                   ><i
-                    class="fa-solid fa-magnifying-glass"
-                    onclick="renderMovies(event)"
+                   id="searchBtn"
+                    class="fa-solid fa-magnifying-glass click"
+                    onclick="renderMovies(filter)"
                     role="img"
                   ></i
                 ></a>
@@ -79,32 +82,37 @@
           <div class="movies">
             <i class="fa-solid fa-spinner movies__loading--spinner"></i>
           </div>
-          <div class="movies">
-            <!-- <div class="movie">
-                <figure class="movie__img--wrapper">
-                    <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg" alt="">
-                </figure>
-                <div class="movie__wrapper--bg"></div>
-                <div class="movie__description">
-                 <div class="movie__description--title">
-                  <a href="#"><i class="fa-solid fa-film"></i></a>
-                    <h3 class="movie__title">
-                      The Fast And The Furious
-                    </h3>
-                    </div>
-                    <div class="movie__release--date">
-                      <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
-                        <h2 class="release__date">
-                            2001
-                        </h2>
-                 </div>
-                </div>
-        </div>
-          </div> -->
         </div>
           </div>
-        </div>
       </section>
     </main>
+    
+    <footer>
+      <div class="footer__container">
+        <div class="row footer__row">
+          <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixmEOFqOzGzfZRDu8i76vj8Vyrudgp1Az7Q&s" alt="" class="footer__logo--img">
+          </figure>
+          <div class="footer__links click__main">
+            <a
+              href="#landing-page"
+              class="footer__link
+              link__hover-effect
+              link__hover-effect--white"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="footer__link 
+              link__hover-effect
+              link__hover-effect--white"
+              >Movies</a
+            >
+            <a href="#" class="link__anchor--btn">Contact</a>
+          </div>
+          <div class="footer__copyright"> Copyright © 2025 Nicholas Jinks</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
