@@ -1,5 +1,12 @@
 // https://www.omdbapi.com/?apikey=74a7591a&s=fast
-
+function openMenu() {
+    document.body.classList += " menu--open"
+  }
+  
+  function closeMenu() {
+    document.body.classList.remove('menu--open')
+  }
+  
 let hasMovies;
 
 
@@ -12,21 +19,14 @@ async function renderMovies(filter) {
     // console.log(moviesData);
 
 
-    moviesList.classList += ' movies__loading'
+    // moviesList.classList += ' movies__loading'
 
-    if(!hasMovies)
-        hasMovies = moviesData;
+    if(!movies === true) {
+       moviesList.classList += ' movies__loading'
+    }
+        moviesList.classList.remove('movies__loading')
 
-    // if(hasMovies) {
-    //     hasMovies = false;
-    //     return moviesList.classList += ' movies__loading'
-    // }
-
-    // hasMovies = true;
     // moviesList.classList.remove('movies__loading')
-
-
-    moviesList.classList.remove('movies__loading')
 
     if(filter === 'OLD_TO_NEW') {
         moviesData.Search.sort((a,b) => (a.Year) - (b.Year));
@@ -62,13 +62,28 @@ async function renderMovies(filter) {
 };
 function filterMovies(event) {
     renderMovies(event.target.value);
-  };
+  }
+
+  setTimeout(() => {
+    renderMovies();
+  });
+
+//   function renderMovies() {
+//     return new Promise((resolve) => {
+//         setTimeout (() => {
+//             resolve([
+
+//             ]);
+//         },1000);
+//     });
+//   }
 
 
 const textbox = document.getElementById("searchText");
 textbox.addEventListener("keypress", function renderMovies(event) {
     if(KeyboardEvent.keyCode === '13') {
         document.getElementById("searchBtn").click();
+        
     }
     else if(KeyboardEvent.keyCode !== '13') {
         return false;
